@@ -47,7 +47,17 @@ app.put('/v1/explorers/:id', (req, res) => {
   console.log(`Update explorer with id ${ req.params.id }`)
   const requestBody = req.body //Párametros de un cliente
 
-  res.status(201).json({message: "Updated"})
+  res.status(200).json({message: "Updated"})
+}); 
+
+//DELETE Crea un endpoint para eliminar un explorer
+
+app.delete('/v1/explorers/:id', (req, res) => {
+  console.log(`API Explorers DELETE request ${ new Date() }`)
+  console.log(`Delete explorer with id ${ req.params.id }`)
+  const requestBody = req.body //Párametros de un cliente
+
+  res.status(200).json({message: "Deleted"})
 }); 
 
 // Con esto inicializamos esta app
